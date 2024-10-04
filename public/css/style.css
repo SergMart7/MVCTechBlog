@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(162, 162, 162);
+    color: #fff;
+  }
+  
+  /* Header and Navigation */
+
+  header {
+    background-color: #00343b;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    width: 80%;
+  }
+  
+  nav a {
+    color: #eee;
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    color: #fff;
+    text-decoration: underline;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+  }
+  
+  /* Main Content Containers */
+
+  .container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #00343b;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  /* Form Elements */
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #005f6b;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #007b8f;
+  }
+  
+  /* Dashboard, Posts, and Comments */
+
+  #dashboard,
+  #main,
+  #posts,
+  #post-form {
+    margin-top: 20px;
+  }
+  
+  #dashboard,
+  #posts {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #005f6b;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  #post-form,
+  #comment-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .post-item {
+    padding: 10px;
+    background-color: #006b7f;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  /* Responsive Design */
+
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+    }
+    
+    .container {
+      width: 95%;
+    }
+  
+    form {
+      width: 100%;
+    }
+  }
+  

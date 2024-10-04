@@ -1,0 +1,17 @@
+<div id="main">
+
+  <!-- Loop through all posts to display on the homepage -->
+
+  {{#each posts}}
+    <div class="post-item">
+      <h2>{{this.title}}</h2>
+      <p>{{this.content}}</p>
+
+      <!-- Link to view full post details -->
+
+      <a href="/post/{{this.id}}">Read More</a>
+    </div>
+  {{else}}
+    <p>No posts have been made yet.</p>
+  {{/each}}
+</div>

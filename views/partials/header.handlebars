@@ -1,0 +1,14 @@
+<header>
+  <nav>
+    <a href="/">Home</a>
+    <!-- Show different links based on the user's login status -->
+    {{#if logged_in}}
+      <a href="/dashboard">Dashboard</a>
+      <a id="logout" href="#">Log out</a>
+    {{else}}
+      <a href="/login">Login</a>
+      <a href="/signup">Sign Up</a>
+    {{/if}}
+  </nav>
+</header>
+<script src="/js/logout.js"></script>

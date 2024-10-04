@@ -1,0 +1,22 @@
+const logout = async () => {
+  try {
+    const response = await fetch("/api/users/logout", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+    });
+
+    if (response.ok) {
+      document.location.replace("/");
+    } else {
+      alert("Failed to log out. Please try again.");
+    }
+  } catch (error) {
+    console.error("Error during logout:", error);
+    alert("An error occurred while logging out.");
+  }
+};
+
+document.querySelector("#logout")?.addEventListener("click", (event) => {
+  event.preventDefault();
+  logout();
+});
