@@ -12,6 +12,8 @@ router.use("/api", apiRoutes);
 
 router.use("/", homeRoutes);
 
+router.use("/appi/users", userRoutes);
+
 // If no routes are hit, send a 404 status
 
 router.use((req, res) => {
