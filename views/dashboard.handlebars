@@ -1,0 +1,54 @@
+<main class="container mt-5">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    <div class="container-fluid">
+      <div class=" navbar" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="btn btn-light me-2" role="button" href="/">Home</a> 
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-light" role="button" id="btnLogout" href="/login">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <h1 class="text-center mb-4">{{user.name}}'s Dashboard</h1>
+  
+  <form id="new-post-form">
+    <div class="mb-3">
+      <label class="form-label" for="post-title">Title:</label>
+      <textarea name="title" class="form-control" rows="1" id="post-title" placeholder="Enter post title"></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label" for="post-content">Content:</label>
+      <textarea name="content" class="form-control" rows="3" id="post-content" placeholder="Enter post content" required></textarea>
+    </div>
+
+    <div class="d-grid">
+      <button class="btn btn-primary" type="submit">Submit Post</button>
+    </div>
+  </form>
+ {{!-- {{#if posts.length}}
+  <div class="col-md-6 project-list">
+    <h3>Current Projects:</h3>
+
+    {{#each posts}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/project/{{posts.id}}">{{posts.name}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{posts.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}} --}}
+
+</main>
+
+<script src="/js/dashboard.js"></script>
+<script src="/js/logout.js"></script>
