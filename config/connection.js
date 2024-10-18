@@ -10,14 +10,14 @@ if (process.env.DB_URL) {
     protocol: 'postgres',
     dialectOptions: {
       ssl: {
-        require: true,
+        require: true, 
         rejectUnauthorized: false
       }
     },
     logging: false
   });
 } else {
- 
+  // For local development environment
   sequelize = new Sequelize(
     process.env.DB_NAME,
     process.env.DB_USER,
