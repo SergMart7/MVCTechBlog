@@ -4,20 +4,20 @@ require('dotenv').config();
 let sequelize;
 
 if (process.env.DB_URL) {
-  // Use DB_URL for Render deployment
+  // For production environment using Render's DB_URL
   sequelize = new Sequelize(process.env.DB_URL, {
     dialect: 'postgres',
     protocol: 'postgres',
     dialectOptions: {
       ssl: {
         require: true,
-        rejectUnauthorized: false // Render uses self-signed certificates
+        rejectUnauthorized: false
       }
     },
     logging: false // Disable logging in production
   });
 } else {
-  // Local development fallback
+  // For local development
   sequelize = new Sequelize(
     process.env.DB_NAME,
     process.env.DB_USER,
@@ -26,7 +26,7 @@ if (process.env.DB_URL) {
       host: process.env.DB_HOST || 'localhost',
       dialect: 'postgres',
       port: process.env.DB_PORT || 5432,
-      logging: false // Disable logging in development
+      logging: false
     }
   );
 }
