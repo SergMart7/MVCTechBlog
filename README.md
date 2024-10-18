@@ -28,7 +28,7 @@ This project is licensed under the MIT License. For more information, please vis
 
 ## Contributing
 
-Just ask kindly :D
+Just ask kindly, please :D
 
 ## Questions
 
